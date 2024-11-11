@@ -1,0 +1,41 @@
+DEBUG_HW = False
+
+# Hardware
+from gpiozero import Button, LED
+
+# Default: HIGH (Standby), Toggle: LOW (Start)
+PIN_BUTTON_START = Button("BOARD40")
+# Default: HIGH (Classic), Toggle: LOW (Timed)
+PIN_TOGGLE_MODE = Button("BOARD33")
+# Default: HIGH (Prep), Toggle: LOW (Ready)
+PIN_TOGGLE_PREP_1 = Button("BOARD35")
+# Default: HIGH (Prep), Toggle: LOW (Ready)
+PIN_TOGGLE_PREP_2 = Button("BOARD36")
+# Default: HIGH (Standby), Toggle: LOW (End: P1)
+PIN_BUTTON_END_1 = Button("BOARD32")
+# Default: HIGH (Standby), Toggle: LOW (End: P2)
+PIN_BUTTON_END_2 = Button("BOARD31")
+# Default: LOW, Toggle: HIGH (LED: P1)
+PIN_LED_P_1 = LED("BOARD19")
+# Default: LOW, Toggle: HIGH (LED: P2)
+PIN_LED_P_2 = LED("BOARD13")
+# Default: LOW, Toggle: HIGH (LED: WINNER)
+PIN_LED_COM = LED("BOARD15")
+# Default: HIGH (Standby), Toggle: LOW (Challenger: P1)
+PIN_BUTTON_CHAL_1 = Button("BOARD38")
+# Default: HIGH (Standby), Toggle: LOW (Challenger: P2)
+PIN_BUTTON_CHAL_2 = Button("BOARD37")
+
+while DEBUG_HW:
+    print("PIN_BUTTON_START:", PIN_BUTTON_START)
+    print("PIN_TOGGLE_MODE:", PIN_TOGGLE_MODE)
+    print("PIN_TOGGLE_PREP_1:", PIN_TOGGLE_PREP_1)
+    print("PIN_TOGGLE_PREP_2:", PIN_TOGGLE_PREP_2)
+    print("PIN_BUTTON_END_1:", PIN_BUTTON_END_1)
+    print("PIN_BUTTON_END_2:", PIN_BUTTON_END_2)
+    print("PIN_LED_P_1:", PIN_LED_P_1)
+    print("PIN_LED_P_2:", PIN_LED_P_2)
+    print("PIN_LED_COM:", PIN_LED_COM)
+    print("PIN_BUTTON_CHAL_1:", PIN_BUTTON_CHAL_1)
+    print("PIN_BUTTON_CHAL_2:", PIN_BUTTON_CHAL_2)
+    time.sleep(3)
